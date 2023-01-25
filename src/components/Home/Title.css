@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap');
+
+
+
+.intro-container {
+  background-image: url(../src/assets/fundo.png);
+  display: flex;
+  height: 544px;
+  width: 100%;
+  
+}
+
+.intro-text-container {
+  margin-inline-start: 160px;
+}
+
+.intro-title-container {
+  width: 588px;
+}
+
+.intro-title {
+  font-family: 'Baloo 2', cursive;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 62.2px;
+  margin-bottom: 16px;
+}
+
+.intro-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+}
+
+.intro-items-container {
+  width: 567px;
+  height: 84px;
+}
+
+.intro-items-lists {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.intro-lists-item {
+  list-style-type: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  margin-bottom: 25.5px;
+}
+
+.intro-coffee-img {
+  margin-inline-end: 160px;
+  width: 476px;
+  height: 360px;
+  margin-left: 56px;
+}
+
+.item-btn-cart {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px;
+gap: 8px;
+width: 32px;
+height: 32px;
+background: #C47F17;
+border-radius: 1000px;
+border: none;
+}
+
+.item-icon-cart {
+  width: 14px;
+}
+
+.item-btn-timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 32px;
+  height: 32px;
+  background: #DBAC2C;
+  border-radius: 1000px;
+  border: none;
+}
+
+.item-icon-timer {
+  width: 14px;
+}
+
+.item-btn-package {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 32px;
+  height: 32px;
+  background: #574F4D;
+  border-radius: 1000px;
+  border: none;
+}
+
+.item-icon-package {
+  width: 14px;
+}
+
+.item-btn-coffee {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 32px;
+  height: 32px;
+  background: #8047F8;
+  border-radius: 1000px;
+  border: none;
+}
+
+.item-icon-coffee {
+  width: 14px;
+}
+
+.item-btn {
+  margin-right: 12px;
+}
