@@ -6,6 +6,11 @@
   background-color: #F3F2F2;
   border-radius: 6px 36px;
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .CoffeeCard-img {
@@ -14,8 +19,6 @@
 }
 
 .CoffeeCard-tags {
-  width: 65px;
-  height: 13px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -33,6 +36,7 @@
   background: #F1E9C9;
   border-radius: 100px;
   border: none;
+  margin-top: 16px;
 }
 
 .CoffeeCard-name {
@@ -40,8 +44,10 @@
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
-  line-height: 130%;
+  line-height: 18.2px;
   color: #403937;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 .CoffeeCard-description {
@@ -52,10 +58,21 @@
   line-height: 130%;
   text-align: center;
   color: #8D8686;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 216px;
 }
 
 .CoffeeCard-buy-container {
-
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 208px;
+  height: 38px;
+  margin: 33px 24px 20px 24px;
 }
 
 .CoffeeCard-buy-price {
@@ -68,20 +85,36 @@
   line-height: 130%;
   text-align: right;
   color: #574F4D;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .buy-price-span {
-  font-size: 25px;
+  font-size: 31px;
   font-family: 'Baloo 2', sans-serif;
   font-weight: 900;
 }
 
 .CoffeeCard-buy-actions {
-
+  width: 118px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: nowrap;
 }
 
 .CoffeeCard-action-counter {
-
+  background-color: #E6E5E5;
+  width: 72px;
+  height: 38px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .action-counter-btn {
@@ -92,6 +125,28 @@
   border: none;
   width: 14px;
   height: 14px;
+  border-radius: 2px;
+  margin-inline: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-counter-btn:hover {
+  background-color: #a7a7a7;
+  cursor: pointer;
+}
+
+.counter-btn-minus {
+  height: 10.9375px;
+  width: 10.9375px;
+;
+
+} 
+
+.counter-btn-plus {
+  height: 10.9375px;
+  width: 10.9375px;
 }
 
 .action-counter-input {
@@ -105,6 +160,20 @@
   text-align: center;
   color: #272221;
   border: none;
+  background: none;
+  -ms-appearance:textfield;
+  -moz-appearance:textfield;
+}
+
+.action-counter-input::-webkit-outer-spin-button,
+.action-counter-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.action-counter-input:focus {
+  border: none;
+  outline: none;
 }
 
 .CoffeeCard-action-Cart {

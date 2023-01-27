@@ -1,10 +1,10 @@
 import React from 'react';
-import CoffeeCard from './components/Products/CoffeeCard.jsx'
+import Home from './components/Pages/Home'
 
 const App = () => {
   return (
     <div>
-      <CoffeeCard></CoffeeCard>
+      <Home/>
     </div>
   );
 }
