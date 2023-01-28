@@ -11,11 +11,19 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  margin: 40px 32px 40px 0;
 }
 
 .CoffeeCard-img {
   width: 120px;
   height: 120px;
+}
+
+.CoffeeCard-tags-container{
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .CoffeeCard-tags {
@@ -31,12 +39,13 @@
   justify-content: center;
   align-items: center;
   padding: 4px 8px;
-  width: 81px;
+  min-width: 10px;
   height: 21px;
   background: #F1E9C9;
   border-radius: 100px;
   border: none;
   margin-top: 16px;
+  margin-inline: 2px;
 }
 
 .CoffeeCard-name {
@@ -188,6 +197,11 @@
   background-color: #4B2995;
   border-radius: 6px;
   border: none;
+}
+
+.CoffeeCard-action-Cart:hover {
+  cursor: pointer;
+  background-color: #411d90;
 }
 
 .CoffeeCard-buy-icon {

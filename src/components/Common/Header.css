@@ -49,6 +49,11 @@
   background-color: #F1E9C9;
 }
 
+.header-actions-cart:hover {
+  cursor: pointer;
+  background-color: #efe1ab;
+}
+
 .header-cart-icon {
    width: 21px;
 }

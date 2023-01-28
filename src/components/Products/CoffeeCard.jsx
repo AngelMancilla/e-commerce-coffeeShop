@@ -1,18 +1,26 @@
 import React, { useState } from 'react'
 import './CoffeeCard.css'
 
-export default function CoffeeCard() {
+export default function CoffeeCard( props ) {
 
     const [value, setValue] = useState(0);
 
+    const tags = []
+    for (let i = 0; i < props.numTags; i++) {
+    tags.push(<button className='CoffeeCard-tags' key={i}>{props.tag[i]}</button>)
+     }
+
   return (
+    <>
     <div className='CoffeeCard-container'>
-      <img className='CoffeeCard-img' src="../src/assets/coffees/tradicional.png" alt="" />
-      <button className='CoffeeCard-tags'>Traditional</button>
-      <h4 className='CoffeeCard-name'>Traditional Espresso</h4>
-      <p className='CoffeeCard-description'>Traditional coffee made with hot water and ground beans</p>
+      <img className='CoffeeCard-img' src={props.src} alt={props.name} />
+      <div className='CoffeeCard-tags-container'>
+        {tags}
+      </div>
+      <h4 className='CoffeeCard-name'>{props.name}</h4>
+      <p className='CoffeeCard-description'>{props.description}</p>
       <div className='CoffeeCard-buy-container'>
-        <p className='CoffeeCard-buy-price'>$<span className='buy-price-span'>1.99</span></p>
+        <p className='CoffeeCard-buy-price'>$<span className='buy-price-span'>{props.price}</span></p>
         <div className='CoffeeCard-buy-actions'>
           <div className='CoffeeCard-action-counter'>
             <button className='action-counter-btn' onclick="decrement()"><img className='counter-btn-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus/icon" /></button>
@@ -23,5 +31,6 @@ export default function CoffeeCard() {
         </div>
       </div>
     </div>
+    </>
   )
 }
