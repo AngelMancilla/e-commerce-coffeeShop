@@ -1,10 +1,10 @@
 import React from 'react';
-import Home from './components/Pages/Home'
+import PaymentForm from './components/Checkout/PaymentForm';
 
 const App = () => {
   return (
     <div>
-      <Home/>
+      <PaymentForm></PaymentForm>
     </div>
   );
 }
