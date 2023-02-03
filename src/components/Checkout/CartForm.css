@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap');
+
+.cartform-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+  gap: 10px;
+  width: 300px;
+  min-height: 205px;
+  background: #F3F2F2;
+  border-radius: 6px 36px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cartform-coffeecard-container {
+  width: 100%;
+}
+
+.cartform-coffeecard-text {
+  text-align: center;
+  font-weight: 300;
+}
+
+.cartform-data-container {
+ width: 100%;
+}
+
+.cartform-table {
+  width: 100%;
+  font-family: 'roboto', sans-serif;
+  height: 65px;
+}
+
+.table-data {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(107, 107, 107);
+}
+
+.table-total {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.table-td-end {
+ text-align: end;
+}
+
+.cartform-button {
+  color: white;
+  background-color: #DBAC2C;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  width: 100%;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.cartform-button:hover {
+  cursor: pointer;
+  background-color: #c29827;
+}

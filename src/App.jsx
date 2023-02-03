@@ -1,10 +1,10 @@
 import React from 'react';
-import PaymentForm from './components/Checkout/PaymentForm';
+import CartForm from './components/Checkout/CartForm';
 
 const App = () => {
   return (
     <div>
-      <PaymentForm></PaymentForm>
+      <CartForm></CartForm>
     </div>
   );
 }

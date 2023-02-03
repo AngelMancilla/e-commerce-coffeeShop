@@ -1,0 +1,144 @@
+.coffeecart-container {
+  display: flex;
+  align-items: center;
+}
+
+.coffeecart-img {
+  width: 70px;
+  margin-right: 20px;
+}
+
+.coffecart-frame-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.frame-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: lighter;
+}
+
+.coffeecart-buy-actions {
+  width: 126px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: nowrap;
+}
+
+.coffeecart-action-counter {
+  background-color: #E6E5E5;
+  width: 50px;
+  height: 25px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-counter-btn {
+  background: none;
+  color: #8047F8;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  width: 12px;
+  height: 20px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-counter-btn:hover {
+  background-color: #a7a7a7;
+  cursor: pointer;
+}
+
+.counter-btn-minus {
+  height: 8.9375px;
+  width: 8.9375px;
+
+} 
+
+.counter-btn-plus {
+  height: 8.9375px;
+  width: 8.9375px;
+}
+
+.action-counter-input {
+  width: 10px;
+  height: 11px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  text-align: center;
+  color: #272221;
+  border: none;
+  background: none;
+  -ms-appearance:textfield;
+  -moz-appearance:textfield;
+}
+
+.action-counter-input::-webkit-outer-spin-button,
+.action-counter-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.action-counter-input:focus {
+  border: none;
+  outline: none;
+}
+
+.coffeecart-action-trash {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 9px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  width: 70px;
+  height: 25px;
+  background-color: #E6E5E5;
+  border-radius: 6px;
+  border: none;
+}
+
+.coffeecart-action-trash:hover {
+  cursor: pointer;
+  background-color: #a7a7a7
+}
+
+.coffeecart-trash-icon {
+  width: 15px;
+}
+
+.coffeecart-price-container {
+  width: 100%;
+  height: 70px;
+}
+
+.coffeecart-price {
+  font-family: 'roboto', sans-serif;
+  font-weight: bolder;
+  color: rgb(33, 33, 33);
+  font-size: 15px;
+  text-align: end;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.cartform-hr {
+  border-top: 1.5px solid #e2e2e2;
+  width: 100%;
+ }
+ 
