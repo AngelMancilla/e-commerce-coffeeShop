@@ -19,7 +19,7 @@ export default function PaymentForm() {
         />
         <div className="frame-text-container">
           <h4 className="frame-text-title">Payment</h4>
-          <p className="frame-text-subtitle">
+          <p className="paymentform-frame-text-subtitle">
             Payment is made on delivery, choose the way you want to pay
           </p>
         </div>

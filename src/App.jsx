@@ -1,10 +1,12 @@
 import React from 'react';
-import CartForm from './components/Checkout/CartForm';
+import Home from './components/Pages/Home'
+import Checkout from './components/Pages/Checkout'
+import ConfirmedRequest from './components/Pages/ConfirmedRequest';
 
 const App = () => {
   return (
     <div>
-      <CartForm></CartForm>
+      <Home />
     </div>
   );
 }

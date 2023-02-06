@@ -17,7 +17,9 @@
 .frame-title {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 18px;
   font-weight: lighter;
+  width: 200px;
 }
 
 .coffeecart-buy-actions {
@@ -32,8 +34,8 @@
 
 .coffeecart-action-counter {
   background-color: #E6E5E5;
-  width: 50px;
-  height: 25px;
+  width: 70px;
+  height: 35px;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -46,8 +48,8 @@
   font-size: 20px;
   font-weight: 700;
   border: none;
-  width: 12px;
-  height: 20px;
+  width: 22px;
+  height: 30px;
   border-radius: 2px;
   display: flex;
   justify-content: center;
@@ -55,28 +57,22 @@
 }
 
 .action-counter-btn:hover {
-  background-color: #a7a7a7;
+  border: 1px solid #8047F8;
   cursor: pointer;
 }
 
-.counter-btn-minus {
-  height: 8.9375px;
-  width: 8.9375px;
-
-} 
-
-.counter-btn-plus {
-  height: 8.9375px;
-  width: 8.9375px;
+.counter-btn-plus-minus {
+  height: 14.9375px;
+  width: 14.9375px;
 }
 
 .action-counter-input {
-  width: 10px;
-  height: 11px;
+  width: 20px;
+  height: 21px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 130%;
   text-align: center;
   color: #272221;
@@ -100,26 +96,27 @@
 .coffeecart-action-trash {
   font-family: 'Roboto', sans-serif;
   font-weight: lighter;
-  font-size: 9px;
+  font-size: 13px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 8px;
-  width: 70px;
-  height: 25px;
+  width: 80px;
+  height: 35px;
   background-color: #E6E5E5;
   border-radius: 6px;
   border: none;
+  margin-left: 12px;
 }
 
 .coffeecart-action-trash:hover {
   cursor: pointer;
-  background-color: #a7a7a7
+  border: 1px solid #8047F8;
 }
 
 .coffeecart-trash-icon {
-  width: 15px;
+  width: 18px;
 }
 
 .coffeecart-price-container {
@@ -131,7 +128,7 @@
   font-family: 'roboto', sans-serif;
   font-weight: bolder;
   color: rgb(33, 33, 33);
-  font-size: 15px;
+  font-size: 22px;
   text-align: end;
   margin-top: 0;
   margin-bottom: 0;

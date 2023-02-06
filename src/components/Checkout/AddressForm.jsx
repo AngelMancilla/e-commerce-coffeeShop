@@ -8,7 +8,7 @@ export default function AddressForm() {
         <img className='addressform-frame-icon' src='../src/assets/checkout-icons/Pin-icon.svg' alt='Icon pin' />
         <div className='frame-text-container'>
           <h4 className='frame-text-title'>Delivery address</h4>
-          <p className='frame-text-subtitle'>Enter the address where you want to receive your order</p>
+          <p className='addressform-frame-text-subtitle'>Enter the address where you want to receive your order</p>
         </div>
       </div>
       <div className='addressform-form-container'>

@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap');
+
+.shipment-container {
+  min-width: 410px;
+}
+
+.shipment-title {
+ font-family: 'Baloo 2', sans-serif;
+ font-size: 45px;
+ color: #ba8232;
+ margin-bottom: 5px;
+}
+
+.shipment-subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+  color: #403937;
+  margin-top: 0;
+}
+
+.shipment-box-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  min-width: 460px;
+  height: 250px;
+  border-radius: 6px 36px;
+  border: 2px solid #48a7ff; ;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.shipment-frame-container {
+  display: flex;
+  padding: 0px;
+  gap: 8px;
+  width: 410px;
+  height: 44px;
+  margin-left: 15px;
+}
+
+.shipment-frame-button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  border: none;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+}
+
+.shipment-frame-icon {
+  width: 24px;
+  height: 20px;
+}
+
+.frame-text-container {
+  padding: 0px;
+  gap: 2px;
+  width: 350px;
+  height: 44px;
+}
+
+.frame-text-title {
+  width: 350px;
+  height: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 130%;
+  color: #403937;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.frame-text-subtitle {
+  width: 350px;
+  height: 21px;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 130%;
+  display: flex;
+  align-items: center;
+  color: #574F4D;
+  margin-top: 0;
+}
+
