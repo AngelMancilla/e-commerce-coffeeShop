@@ -10,6 +10,15 @@
   margin-inline-end: 90px;
 }
 
+.header-logo-btn {
+  border: none;
+  background: none;
+}
+
+.header-logo-btn:hover {
+  cursor: pointer;
+}
+
 .header-logo-icon {
   height: 40px;
 }

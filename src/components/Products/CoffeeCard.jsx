@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import './CoffeeCard.css'
 
 export default function CoffeeCard( props ) {
@@ -9,6 +10,9 @@ export default function CoffeeCard( props ) {
     for (let i = 0; i < props.numTags; i++) {
     tags.push(<button className='CoffeeCard-tags' key={i}>{props.tag[i]}</button>)
      }
+
+    const navigate = useNavigate()
+    const handleClick = () => { navigate('/Checkout') }
 
   return (
     <>
@@ -27,7 +31,7 @@ export default function CoffeeCard( props ) {
             <input className='action-counter-input' type="number" id="quantity" value={value} onChange={event => setValue(event.target.value)} min={ 0 } ></input>
             <button className='action-counter-btn' onclick="increment()"><img className='counter-btn-plus' src="../src/assets/CoffeeCars-icons/plus-icon.svg" alt="plus-icon" /></button>
           </div>
-          <button className='CoffeeCard-action-Cart'><img className='CoffeeCard-buy-icon' src="../src/assets/intro-icons/cart-icon.svg" alt="" /></button>
+          <button onClick={ handleClick } className='CoffeeCard-action-Cart'><img className='CoffeeCard-buy-icon' src="../src/assets/intro-icons/cart-icon.svg" alt="" /></button>
         </div>
       </div>
     </div>
