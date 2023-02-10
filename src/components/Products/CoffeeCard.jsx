@@ -4,8 +4,6 @@ import './CoffeeCard.css'
 
 export default function CoffeeCard( props ) {
 
-    const [value, setValue] = useState(0);
-
     const tags = []
     for (let i = 0; i < props.numTags; i++) {
     tags.push(<button className='CoffeeCard-tags' key={i}>{props.tag[i]}</button>)
@@ -13,6 +11,18 @@ export default function CoffeeCard( props ) {
 
     const navigate = useNavigate()
     const handleClick = () => { navigate('/Checkout') }
+
+    const [value, setValue] = useState(0);
+
+    const decrement = () => {
+      setValue(value - 1)
+    }
+    const increment = () => {
+      setValue(value + 1)
+    }
+    const handleChange = event => {
+      setValue(event.target.value);
+    };
 
   return (
     <>
@@ -27,9 +37,9 @@ export default function CoffeeCard( props ) {
         <p className='CoffeeCard-buy-price'>$<span className='buy-price-span'>{props.price}</span></p>
         <div className='CoffeeCard-buy-actions'>
           <div className='CoffeeCard-action-counter'>
-            <button className='action-counter-btn' onclick="decrement()"><img className='counter-btn-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus/icon" /></button>
-            <input className='action-counter-input' type="number" id="quantity" value={value} onChange={event => setValue(event.target.value)} min={ 0 } ></input>
-            <button className='action-counter-btn' onclick="increment()"><img className='counter-btn-plus' src="../src/assets/CoffeeCars-icons/plus-icon.svg" alt="plus-icon" /></button>
+            <button className='action-counter-btn' onClick="decrement"><img className='counter-btn-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus-icon" /></button>
+            <input className='action-counter-input' type="number" id="quantity" onChange={ handleChange } value={value} min={ 0 } ></input>
+            <button className='action-counter-btn' onClick="increment"><img className='counter-btn-plus' src="../src/assets/CoffeeCars-icons/plus-icon.svg" alt="plus-icon" /></button>
           </div>
           <button onClick={ handleClick } className='CoffeeCard-action-Cart'><img className='CoffeeCard-buy-icon' src="../src/assets/intro-icons/cart-icon.svg" alt="" /></button>
         </div>

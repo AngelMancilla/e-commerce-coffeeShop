@@ -6,7 +6,7 @@ export default function CartForm() {
   return (
     <div className='cartform-container'>
       <div className="cartform-coffeecard-container">
-        <CoffeeCart></CoffeeCart>
+        
       </div>
       <div className='cartform-data-container'>
         <table className='cartform-table'>

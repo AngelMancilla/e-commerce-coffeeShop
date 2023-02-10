@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './CoffeeCart.css'
 
-export default function CoffeeCart() {
+export default function CoffeeCart( props ) {
 
   const [value, setValue] = useState(0);
 
@@ -9,9 +9,9 @@ export default function CoffeeCart() {
   return (
     <>
     <div className='coffeecart-container'>
-      <img className='coffeecart-img' src="..\src\assets\coffees\americano.png" alt="Coffee test" />
+      <img className='coffeecart-img' src={ props.img } alt="Coffee test" />
       <div className='coffeecart-frame-container'>
-        <h6 className='frame-title'>Expresso Tradicional</h6>
+        <h6 className='frame-title'>{ props.name }</h6>
         <div className='coffeecart-buy-actions'>
           <div className='coffeecart-action-counter'>
             <button className='action-counter-btn' onclick="decrement()"><img className='counter-btn-plus-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus/icon" /></button>
@@ -22,7 +22,7 @@ export default function CoffeeCart() {
         </div>
       </div>
       <div className='coffeecart-price-container'>
-        <p className='coffeecart-price'>$ 1.99</p>
+        <p className='coffeecart-price'>{ props.price }</p>
       </div>
     </div>
     <hr className='cartform-hr' />
