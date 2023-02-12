@@ -2,26 +2,48 @@ import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import './CoffeeCard.css'
 
+
 export default function CoffeeCard( props ) {
 
+    const addProductToCart = props.addProductToCart
+
+    const handleAddToCart = () => {
+      const product = {
+        ProductName: props.name,
+        price: props.price,
+        count: count,
+        img: props.img
+      };
+      addProductToCart(product);
+    };
+
+    //Add the label
     const tags = []
     for (let i = 0; i < props.numTags; i++) {
     tags.push(<button className='CoffeeCard-tags' key={i}>{props.tag[i]}</button>)
      }
 
+    //Routes
     const navigate = useNavigate()
     const handleClick = () => { navigate('/Checkout') }
 
-    const [value, setValue] = useState(0);
+     //Add the products in an array
+    const [count, setCount] = useState(0);
 
-    const decrement = () => {
-      setValue(value - 1)
-    }
     const increment = () => {
-      setValue(value + 1)
+      setCount(count + 1)
+      props.onCountChange(count + 1)
+    };
+
+    const decrement = () => { 
+      if (count > 0) {
+        setCount(count - 1);
+        props.onCountChange(count - 1)
+      }
     }
+
     const handleChange = event => {
-      setValue(event.target.value);
+      setCount(event.target.value);
     };
 
   return (
@@ -37,11 +59,13 @@ export default function CoffeeCard( props ) {
         <p className='CoffeeCard-buy-price'>$<span className='buy-price-span'>{props.price}</span></p>
         <div className='CoffeeCard-buy-actions'>
           <div className='CoffeeCard-action-counter'>
-            <button className='action-counter-btn' onClick="decrement"><img className='counter-btn-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus-icon" /></button>
-            <input className='action-counter-input' type="number" id="quantity" onChange={ handleChange } value={value} min={ 0 } ></input>
-            <button className='action-counter-btn' onClick="increment"><img className='counter-btn-plus' src="../src/assets/CoffeeCars-icons/plus-icon.svg" alt="plus-icon" /></button>
+            
+            <button className='action-counter-btn' onClick={decrement}><img className='counter-btn-minus' src="../src/assets/CoffeeCars-icons/minus-icon.svg" alt="minus-icon" /></button>
+            <input className='action-counter-input' type="number" id="quantity" value={ count } onChange={handleChange} min={ 0 } ></input>
+            <button className='action-counter-btn' onClick={increment}><img className='counter-btn-plus' src="../src/assets/CoffeeCars-icons/plus-icon.svg" alt="plus-icon" /></button>
+            
           </div>
-          <button onClick={ handleClick } className='CoffeeCard-action-Cart'><img className='CoffeeCard-buy-icon' src="../src/assets/intro-icons/cart-icon.svg" alt="" /></button>
+          <button onClick={ () => handleAddToCart() } className='CoffeeCard-action-Cart'><img className='CoffeeCard-buy-icon' src="../src/assets/intro-icons/cart-icon.svg" alt="" /></button>
         </div>
       </div>
     </div>
