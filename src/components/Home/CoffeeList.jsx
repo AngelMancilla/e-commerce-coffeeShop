@@ -3,7 +3,6 @@ import './CoffeeList.css'
 import CoffeeCard from '../Products/CoffeeCard'
 import products from '../Products/coffees.json'
 
-
 export default function CoffeeList() {
   return (
     <div className='CoffeeList-container'>

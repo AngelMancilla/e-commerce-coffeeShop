@@ -1,7 +1,32 @@
-import React from 'react'
+import React, {useContext, useState, useEffect} from 'react'
 import './AddressForm.css'
+import { CheckoutContext } from '../../CheckoutContext'
 
-export default function AddressForm() {
+
+export default function AddressForm(props) {
+  
+const { setIsFormValid } = useContext(CheckoutContext);
+const [formValues, setFormValues] = useState({
+ zipcode: '',
+ street: '',
+ number: '',
+ complement: '',
+ district: '',
+ city: '',
+ state:''
+})
+
+const handleInputChange = (event) => {
+  const { name, value } = event.target;
+  setFormValues({ ...formValues, [name]: value })
+}
+
+useEffect(() => {
+  const isFormValid = Object.values(formValues).every(value => value !== '')
+  setIsFormValid(isFormValid)
+  console.log(`VALIDO? ${isFormValid}`)
+}, [formValues, setIsFormValid])
+
   return (
     <div className='addressform-container'> 
       <div className='addressform-frame-container'>
@@ -12,17 +37,17 @@ export default function AddressForm() {
         </div>
       </div>
       <div className='addressform-form-container'>
-        <form  action="">
-        <input className='form-input form-input-zipcode' type="text" name="zipcode" id="input-zipcode" placeholder='Zip code'/>
-        <input className='form-input form-input-street' type="text" name="street" id="input-street" placeholder='Street'/>
+        <form >
+        <input className='form-input form-input-zipcode' type="number" name="zipcode" onChange={handleInputChange}  id="input-zipcode" placeholder='Zip code' />
+        <input className='form-input form-input-street' type="text" name="street" onChange={handleInputChange}  id="input-street" placeholder='Street' />
         <div className='form-action-s1'>
-        <input className='form-input form-input-number' type="text" name="number" id="input-number"  placeholder='Number'/>
-        <input className='form-input form-input-complement' type="text" name="complement" id="input-complement"  placeholder='Complement'/>
+        <input className='form-input form-input-number' type="number" name="number" onChange={handleInputChange} id="input-number"  placeholder='Number' />
+        <input className='form-input form-input-complement' type="text" name="complement" onChange={handleInputChange} id="input-complement"  placeholder='Complement' />
         </div>
         <div className='form-action-s2'>
-          <input className='form-input form-input-district' type="text" name="district" id="input-district"  placeholder='District'/>
-          <input className='form-input form-input-city' type="text" name="city" id="input-city"  placeholder='City'/>
-          <input className='form-input form-input-state' type="text" name="state" id="input-state"  placeholder='State'/>
+          <input className='form-input form-input-district' type="text" name="district" onChange={handleInputChange} id="input-district"  placeholder='District' />
+          <input className='form-input form-input-city' type="text" name="city" onChange={handleInputChange} id="input-city" placeholder='City' />
+          <input className='form-input form-input-state' type="text" name="state" onChange={handleInputChange} id="input-state"  placeholder='State' />
         </div>
         </form>
       </div>

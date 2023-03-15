@@ -1,42 +1,70 @@
-import React, { useState } from 'react'
-import './CartForm.css'
-import CoffeeCart from '../Cart/CoffeeCart'
-import CoffeeList from '../Home/CoffeeList'
+import React, { useContext } from "react";
+import "./CartForm.css";
+import CoffeeCart from "../Cart/CoffeeCart";
+import CoffeeList from "../Home/CoffeeList";
+import { CartContext } from "../../CartContext";
+import { CheckoutContext } from "../../CheckoutContext";
 
-export default function CartForm( props ) {
+export default function CartForm({ onSubmit }) {
+
+  const { cart, setCart } = useContext(CartContext)
+
+  const { isFormValid } = useContext(CheckoutContext)
+
+  const delivery = 3.5
+
+  const totalItems = cart.reduce((acc, product) => acc + product.totalPrice, 0)
+
+  const total = (totalItems + delivery).toFixed(2)
+
+  const totalItemsFixed = totalItems.toFixed(2)
+
+  const handleClick = () => {
+   if (cart.length === 0) {
+     alert("El carrito está vacío")
+   } else if (!isFormValid) {
+     alert("El formulario no se ha llenado correctamente")
+   } else {
+     alert("TODO CORRECTO")
+   }
+ }
   
-  const [productCart, setroductCart] = useState([]);
-
-  const delivery = 3.50
-
-  const addCoffeeCard = () => {
-    
-  }
-
   return (
-    <div className='cartform-container'>
+    <div className="cartform-container">
       <div className="cartform-coffeecard-container">
-        
+        {cart &&
+          cart.map((product) => (
+            <CoffeeCart
+              key={product.id}
+              src={product.src}
+              name={product.name}
+              totalPrice={product.totalPrice}
+              cart={cart}
+              setCart={setCart}
+            />
+          ))}
       </div>
-      <div className='cartform-data-container'>
-        <table className='cartform-table'>
+      <div className="cartform-data-container">
+        <table className="cartform-table">
           <tbody>
             <tr>
-              <td className='table-data'>Total items</td>
-              <td className='table-data table-td-end'>$ { props.totalItems }</td>
+              <td className="table-data">Total items</td>
+              <td className="table-data table-td-end">$ {totalItemsFixed}</td>
             </tr>
             <tr>
-              <td className='table-data'>Delivery</td>
-              <td className='table-data table-td-end'>$ { delivery }</td>
+              <td className="table-data">Delivery</td>
+              <td className="table-data table-td-end">$ {delivery}</td>
             </tr>
             <tr>
-              <td className='table-total'>Total</td>
-              <td className='table-total table-td-end'>$ { props.total }</td>
+              <td className="table-total">Total</td>
+              <td className="table-total table-td-end">$ {total}</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <button className='cartform-button'>CONFIRM ORDER</button>
+      <button onClick={handleClick} className="cartform-button">
+        CONFIRM ORDER
+      </button>
     </div>
-  )
+  );
 }

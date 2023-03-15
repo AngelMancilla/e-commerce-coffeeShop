@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap");
 
 .CoffeeCard-container {
   width: 256px;
   height: 310px;
-  background-color: #F3F2F2;
+  background-color: #f3f2f2;
   border-radius: 6px 36px;
   display: flex;
   flex-direction: column;
@@ -19,7 +19,7 @@
   height: 120px;
 }
 
-.CoffeeCard-tags-container{
+.CoffeeCard-tags-container {
   width: 240px;
   display: flex;
   align-items: center;
@@ -27,13 +27,13 @@
 }
 
 .CoffeeCard-tags {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 10px;
   line-height: 130%;
   text-transform: uppercase;
-  color: #C47F17;
+  color: #c47f17;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,7 +41,7 @@
   padding: 4px 8px;
   min-width: 10px;
   height: 21px;
-  background: #F1E9C9;
+  background: #f1e9c9;
   border-radius: 100px;
   border: none;
   margin-top: 16px;
@@ -49,7 +49,7 @@
 }
 
 .CoffeeCard-name {
-  font-family: 'Baloo 2', sans-serif;
+  font-family: "Baloo 2", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -60,13 +60,13 @@
 }
 
 .CoffeeCard-description {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
   text-align: center;
-  color: #8D8686;
+  color: #8d8686;
   margin-top: 0;
   margin-bottom: 0;
   width: 216px;
@@ -87,13 +87,13 @@
 .CoffeeCard-buy-price {
   width: 67px;
   height: 31px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
   text-align: right;
-  color: #574F4D;
+  color: #574f4d;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -102,7 +102,7 @@
 
 .buy-price-span {
   font-size: 31px;
-  font-family: 'Baloo 2', sans-serif;
+  font-family: "Baloo 2", sans-serif;
   font-weight: 900;
 }
 
@@ -117,7 +117,7 @@
 }
 
 .CoffeeCard-action-counter {
-  background-color: #E6E5E5;
+  background-color: #e6e5e5;
   width: 72px;
   height: 38px;
   border-radius: 6px;
@@ -128,7 +128,7 @@
 
 .action-counter-btn {
   background: none;
-  color: #8047F8;
+  color: #8047f8;
   font-size: 20px;
   font-weight: 700;
   border: none;
@@ -149,9 +149,7 @@
 .counter-btn-minus {
   height: 10.9375px;
   width: 10.9375px;
-;
-
-} 
+}
 
 .counter-btn-plus {
   height: 10.9375px;
@@ -161,7 +159,7 @@
 .action-counter-input {
   width: 20px;
   height: 21px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -170,14 +168,14 @@
   color: #272221;
   border: none;
   background: none;
-  -ms-appearance:textfield;
-  -moz-appearance:textfield;
+  -ms-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 .action-counter-input::-webkit-outer-spin-button,
 .action-counter-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .action-counter-input:focus {
@@ -191,10 +189,10 @@
   justify-content: center;
   align-items: center;
   padding: 8px;
-  gap: 8px; 
+  gap: 8px;
   width: 38px;
   height: 38px;
-  background-color: #4B2995;
+  background-color: #4b2995;
   border-radius: 6px;
   border: none;
 }

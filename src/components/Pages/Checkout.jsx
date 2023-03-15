@@ -6,13 +6,14 @@ import PaymentForm from '../Checkout/PaymentForm'
 import CartForm from '../Checkout/CartForm'
 
 export default function Checkout() {
+
   return (
     <>
     <Header />
     <div className='checkout-container'>
       <div className='checkout-form-container'>
         <h2 className='checkout-title' >Complete your order</h2>
-        <AddressForm />
+        <AddressForm/>
         <br />
         <PaymentForm />
       </div>
