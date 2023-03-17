@@ -1,35 +1,35 @@
-import React, { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import "./CoffeeCard.css";
-import { CartContext } from "../../CartContext";
+import React, { useState, useContext } from "react"
+import { useNavigate } from "react-router-dom"
+import "./CoffeeCard.css"
+import { CartContext } from "../../CartContext"
 
 export default function CoffeeCard(props) {
   const { addToCart, count, incrementCount, decrementCount } =
-    useContext(CartContext);
+    useContext(CartContext)
 
   const handleIncrement = () => {
-    incrementCount();
+    incrementCount()
   };
 
   const handleDecrement = () => {
-    decrementCount();
+    decrementCount()
   };
 
-  //Add the label
-  const tags = [];
+  
+  const tags = []
   for (let i = 0; i < props.numTags; i++) {
     tags.push(
       <button className="CoffeeCard-tags" key={i}>
         {props.tag[i]}
       </button>
-    );
+    )
   }
 
-  //Routes
-  const navigate = useNavigate();
+ 
+  const navigate = useNavigate()
   const handleClick = () => {
-    navigate("/Checkout");
-  };
+    navigate("/Checkout")
+  }
 
   return (
     <>

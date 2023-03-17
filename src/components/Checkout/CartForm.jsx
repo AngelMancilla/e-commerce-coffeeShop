@@ -4,6 +4,7 @@ import CoffeeCart from "../Cart/CoffeeCart";
 import CoffeeList from "../Home/CoffeeList";
 import { CartContext } from "../../CartContext";
 import { CheckoutContext } from "../../CheckoutContext";
+import { useNavigate } from "react-router-dom";
 
 export default function CartForm({ onSubmit }) {
 
@@ -19,13 +20,15 @@ export default function CartForm({ onSubmit }) {
 
   const totalItemsFixed = totalItems.toFixed(2)
 
+  const navigate = useNavigate()
+
   const handleClick = () => {
    if (cart.length === 0) {
      alert("El carrito está vacío")
    } else if (!isFormValid) {
      alert("El formulario no se ha llenado correctamente")
    } else {
-     alert("TODO CORRECTO")
+     navigate("/ConfirmedRequest")
    }
  }
   

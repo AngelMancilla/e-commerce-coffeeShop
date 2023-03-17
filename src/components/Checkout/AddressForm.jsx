@@ -5,27 +5,26 @@ import { CheckoutContext } from '../../CheckoutContext'
 
 export default function AddressForm(props) {
   
-const { setIsFormValid } = useContext(CheckoutContext);
+const { setIsFormValid, setShippingAddress } = useContext(CheckoutContext)
 const [formValues, setFormValues] = useState({
  zipcode: '',
  street: '',
  number: '',
- complement: '',
  district: '',
  city: '',
  state:''
 })
 
 const handleInputChange = (event) => {
-  const { name, value } = event.target;
+  const { name, value } = event.target
   setFormValues({ ...formValues, [name]: value })
 }
 
 useEffect(() => {
-  const isFormValid = Object.values(formValues).every(value => value !== '')
+  const isFormValid = Object.values(formValues).every((value) => value !== '')
   setIsFormValid(isFormValid)
-  console.log(`VALIDO? ${isFormValid}`)
-}, [formValues, setIsFormValid])
+  setShippingAddress(formValues)
+}, [formValues, setIsFormValid, setShippingAddress])
 
   return (
     <div className='addressform-container'> 

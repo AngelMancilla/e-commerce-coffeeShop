@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./PaymentForm.css";
+import { CheckoutContext } from "../../CheckoutContext";
 
 export default function PaymentForm() {
   
   const [selectedButton, setSelectedButton] = useState(null);
+  const {setPaymentMethod} = useContext(CheckoutContext)
 
-  const handleButtonClick = (id) => {
-    setSelectedButton(id);
-  };
+  const handleButtonClick = (e) => {
+    setSelectedButton(e.target.id)
+    setPaymentMethod(e.target.innerText)
+  }
 
   return (
     <div className="paymentform-container">
@@ -26,8 +29,10 @@ export default function PaymentForm() {
       </div>
       <div className="paymentform-buttons-container">
         <button
-          onClick={() => handleButtonClick(1)}
-          className={selectedButton === 1 ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          id="1"
+          onClick={handleButtonClick}
+          className={selectedButton === "1" ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          text='Credit card'
         >
           <img
             className="buttons-icons"
@@ -37,8 +42,10 @@ export default function PaymentForm() {
           Credit card
         </button>
         <button
-          onClick={() => handleButtonClick(2)}
-          className={selectedButton === 2 ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          id="2"
+          onClick={handleButtonClick}
+          className={selectedButton === "2" ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          text='Debit card'
         >
           <img
             className="buttons-icons"
@@ -48,8 +55,10 @@ export default function PaymentForm() {
           Debit card
         </button>
         <button
-          onClick={() => handleButtonClick(3)}
-          className={selectedButton === 3 ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          id="3"
+          onClick={handleButtonClick}
+          className={selectedButton === "3" ? "paymentform-button paymentform-button-selected" : "paymentform-button"}
+          text='Cash'
         >
           <img
             className="buttons-icons"
