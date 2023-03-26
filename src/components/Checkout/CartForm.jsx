@@ -7,31 +7,30 @@ import { CheckoutContext } from "../../CheckoutContext";
 import { useNavigate } from "react-router-dom";
 
 export default function CartForm({ onSubmit }) {
+  const { cart, setCart } = useContext(CartContext);
 
-  const { cart, setCart } = useContext(CartContext)
+  const { isFormValid } = useContext(CheckoutContext);
 
-  const { isFormValid } = useContext(CheckoutContext)
+  const delivery = 3.5;
 
-  const delivery = 3.5
+  const totalItems = cart.reduce((acc, product) => acc + product.totalPrice, 0);
 
-  const totalItems = cart.reduce((acc, product) => acc + product.totalPrice, 0)
+  const total = (totalItems + delivery).toFixed(2);
 
-  const total = (totalItems + delivery).toFixed(2)
+  const totalItemsFixed = totalItems.toFixed(2);
 
-  const totalItemsFixed = totalItems.toFixed(2)
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleClick = () => {
-   if (cart.length === 0) {
-     alert("El carrito está vacío")
-   } else if (!isFormValid) {
-     alert("El formulario no se ha llenado correctamente")
-   } else {
-     navigate("/ConfirmedRequest")
-   }
- }
-  
+    if (cart.length === 0) {
+      alert("El carrito está vacío");
+    } else if (!isFormValid) {
+      alert("El formulario no se ha llenado correctamente");
+    } else {
+      navigate("/ConfirmedRequest");
+    }
+  };
+
   return (
     <div className="cartform-container">
       <div className="cartform-coffeecard-container">
@@ -42,6 +41,9 @@ export default function CartForm({ onSubmit }) {
               src={product.src}
               name={product.name}
               totalPrice={product.totalPrice}
+              count={product.count}
+              id={product.id}
+              price={product.price}
               cart={cart}
               setCart={setCart}
             />

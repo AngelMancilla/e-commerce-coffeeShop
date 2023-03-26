@@ -3,20 +3,10 @@ import "./CoffeeCart.css";
 import { CartContext, CartProvider } from "../../CartContext";
 
 export default function CoffeeCart(props) {
+  const { count, setCount, addToCart, removeFromCart } =
+    useContext(CartContext);
 
-  const { cart, setCart, count, setCount } = useContext(CartContext);
-
-  const increment = () => {
-    setCount(count + 1);
-  };
-
-  const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  };
-
-  const handleChange = event => {
+  const handleChange = (event) => {
     setCount(event.target.value);
   };
 
@@ -28,7 +18,10 @@ export default function CoffeeCart(props) {
           <h6 className="frame-title">{props.name}</h6>
           <div className="coffeecart-buy-actions">
             <div className="coffeecart-action-counter">
-            <button className="action-counter-btn" onClick={decrement}>
+              <button
+                className="action-counter-btn"
+                onClick={() => removeFromCart(props.id)}
+              >
                 <img
                   className="counter-btn-plus-minus"
                   src="../src/assets/CoffeeCars-icons/minus-icon.svg"
@@ -43,7 +36,10 @@ export default function CoffeeCart(props) {
                 onChange={handleChange}
                 min={0}
               />
-              <button className="action-counter-btn" onClick={increment}>
+              <button
+                className="action-counter-btn"
+                onClick={() => addToCart(props)}
+              >
                 <img
                   className="counter-btn-plus-minus"
                   src="../src/assets/CoffeeCars-icons/plus-icon.svg"
@@ -51,7 +47,6 @@ export default function CoffeeCart(props) {
                 />
               </button>
             </div>
-            
           </div>
         </div>
         <div className="coffeecart-price-container">
