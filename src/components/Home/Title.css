@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Roboto:wght@400;700&display=swap");
 
 .intro-container {
   background-image: url(../src/assets/fundo.png);
   display: flex;
   height: 544px;
   width: 100%;
-  
 }
 
 .intro-text-container {
@@ -19,7 +16,7 @@
 }
 
 .intro-title {
-  font-family: 'Baloo 2', cursive;
+  font-family: "Baloo 2", cursive;
   font-size: 48px;
   font-weight: 800;
   line-height: 62.2px;
@@ -28,7 +25,7 @@
 }
 
 .intro-subtitle {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -48,7 +45,7 @@
 
 .intro-lists-item {
   list-style-type: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -68,17 +65,17 @@
 }
 
 .item-btn-cart {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 8px;
-gap: 8px;
-width: 32px;
-height: 32px;
-background: #C47F17;
-border-radius: 1000px;
-border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  gap: 8px;
+  width: 32px;
+  height: 32px;
+  background: #c47f17;
+  border-radius: 1000px;
+  border: none;
 }
 
 .item-icon-cart {
@@ -94,7 +91,7 @@ border: none;
   gap: 8px;
   width: 32px;
   height: 32px;
-  background: #DBAC2C;
+  background: #dbac2c;
   border-radius: 1000px;
   border: none;
 }
@@ -112,7 +109,7 @@ border: none;
   gap: 8px;
   width: 32px;
   height: 32px;
-  background: #574F4D;
+  background: #574f4d;
   border-radius: 1000px;
   border: none;
 }
@@ -130,7 +127,7 @@ border: none;
   gap: 8px;
   width: 32px;
   height: 32px;
-  background: #8047F8;
+  background: #8047f8;
   border-radius: 1000px;
   border: none;
 }

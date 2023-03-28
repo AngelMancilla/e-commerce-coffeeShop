@@ -8,7 +8,6 @@ export const CartProvider = ({ children }) => {
   const [count, setCount] = useState(0);
 
   const addToCart = (product) => {
-    console.log(`PRODUCT.id: ${product.id}`);
     const productIndex = cart.findIndex((item) => item.id === product.id);
     if (productIndex !== -1) {
       const updatedProduct = { ...cart[productIndex] };
@@ -29,23 +28,6 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const updateProductCount = (productid, count) => {
-    const updatedCart = {
-      ...cart,
-      [productid]: {
-        ...cart[productid],
-        count: count,
-      },
-    };
-    setCart(updatedCart);
-  };
-
-  useEffect(() => {
-    if (cart.length > 0) {
-      console.log(cart);
-    }
-  }, [cart]);
-
   const removeFromCart = (itemId) => {
     const productIndex = cart.findIndex((item) => item.id === itemId);
 
@@ -53,15 +35,13 @@ export const CartProvider = ({ children }) => {
       const product = cart[productIndex];
 
       product.count--;
-      product.totalPrice -= product.price;
+      product.totalPrice = parseFloat(
+        (product.totalPrice - product.price).toFixed(2)
+      );
 
       if (product.count === 0) {
         cart.splice(productIndex, 1);
       }
-    } else {
-      console.log(
-        `El producto con id ${itemId} no se encuentra en el carrito.`
-      );
     }
     setCart([...cart]);
   };
@@ -72,7 +52,6 @@ export const CartProvider = ({ children }) => {
     removeFromCart,
     count,
     setCount,
-    updateProductCount,
   };
 
   return (

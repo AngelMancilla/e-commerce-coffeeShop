@@ -4,17 +4,35 @@ import "./CoffeeCard.css";
 import { CartContext } from "../../CartContext";
 
 export default function CoffeeCard(product) {
-  const { addToCart, cart, updateProductCount, removeFromCart } =
-    useContext(CartContext);
-  const { count } = cart[product.id] || { count: 0 };
+  const { addToCart, cart, removeFromCart } = useContext(CartContext);
+  const [count, setCount] = useState(0);
 
-  const handleCountChange = (event) => {
-    const value = parseInt(event.target.value) || 0;
-    updateProductCount(product.id, value);
+  useEffect(() => {
+    const productInCart = cart.find((item) => item.id === product.id);
+    if (productInCart) {
+      setCount(productInCart.count);
+    }
+  }, [cart, product.id]);
+
+  const handleIncreaseClick = () => {
+    setCount(count + 1);
+    addToCart(product);
+  };
+
+  const handleDecreaseClick = () => {
+    if (count > 0) {
+      setCount(count - 1);
+    }
   };
 
   const handleAddToCart = () => {
     addToCart(product);
+    handleIncreaseClick();
+  };
+
+  const handleRemoveFromCart = () => {
+    removeFromCart(product.id);
+    handleDecreaseClick();
   };
 
   const tags = [];
@@ -47,7 +65,7 @@ export default function CoffeeCard(product) {
             <div className="CoffeeCard-action-counter">
               <button
                 className="action-counter-btn"
-                onClick={() => removeFromCart(product.id)}
+                onClick={handleRemoveFromCart}
               >
                 <img
                   className="counter-btn-minus"
@@ -60,7 +78,6 @@ export default function CoffeeCard(product) {
                 type="number"
                 id="quantity"
                 value={count}
-                onChange={handleCountChange}
                 min={0}
                 readOnly={true}
               ></input>
