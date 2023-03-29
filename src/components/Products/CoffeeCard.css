@@ -205,3 +205,9 @@
 .CoffeeCard-buy-icon {
   width: 20px;
 }
+
+@media (max-width: 1014px) {
+  .CoffeeCard-container {
+    margin: 20px 12px 20px 12px;
+  }
+}

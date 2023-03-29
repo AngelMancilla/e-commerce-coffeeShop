@@ -19,3 +19,17 @@
   flex-direction: row;
   justify-content: flex-start;
 }
+
+@media (max-width: 1024px) {
+  .CoffeeList-container {
+    margin: 0;
+  }
+
+  .CoffeeList-Title {
+    text-align: center;
+  }
+
+  .CoffeeList-CoffeeCard-container {
+    justify-content: space-evenly;
+  }
+}
