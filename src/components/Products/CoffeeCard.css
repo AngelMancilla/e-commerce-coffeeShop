@@ -211,3 +211,15 @@
     margin: 20px 12px 20px 12px;
   }
 }
+
+@media (max-width: 540px) {
+  .CoffeeCard-container {
+    width: 216px;
+  }
+}
+
+@media (max-width: 414px) {
+  .CoffeeCard-container {
+    width: 216px;
+  }
+}

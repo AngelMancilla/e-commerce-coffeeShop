@@ -33,3 +33,19 @@
     justify-content: space-evenly;
   }
 }
+
+@media (max-width: 540px) {
+  .CoffeeList-Title { 
+    font-size: 26px;
+  }
+
+
+}
+
+@media (max-width: 414px) {
+  .CoffeeList-Title { 
+    font-size: 26px;
+    width: 414px;
+  }
+  
+}

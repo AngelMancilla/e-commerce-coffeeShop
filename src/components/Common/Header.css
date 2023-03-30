@@ -69,3 +69,51 @@
 span {
   vertical-align: super;
 }
+
+@media (max-width: 540px) {
+  .header-logo-icon {
+    height: 30px;
+  }
+
+  .header-actions-location {
+    font-size: 11px;
+    width: 123px;
+  }
+
+  .header-location-icon {
+    width: 17px;
+  }
+
+  .header-cart-icon {
+    width: 20px;
+  }
+
+  .header-container {
+    margin-inline-start: 60px;
+    margin-inline-end: 60px;
+  }
+}
+
+@media (max-width: 415px) {
+  .header-logo-icon {
+    height: 30px;
+  }
+
+  .header-actions-location {
+    font-size: 11px;
+    width: 123px;
+  }
+
+  .header-location-icon {
+    width: 17px;
+  }
+
+  .header-cart-icon {
+    width: 20px;
+  }
+
+  .header-container {
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+  }
+}
