@@ -218,8 +218,222 @@
   }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 415px) {
   .CoffeeCard-container {
-    width: 216px;
+    width: 400px;
+    height: 180px;
+    background-color: #f3f2f2;
+    border-radius: 6px 36px;
+    margin: 10px 2px 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". CoffeeCard-name . CoffeeCard-buy-container"
+      "CoffeeCard-img CoffeeCard-description . CoffeeCard-buy-container"
+      ". CoffeeCard-tags-container . CoffeeCard-buy-container";
   }
+  
+  .CoffeeCard-img {
+    width: 70px;
+    height: 70px;
+    margin-right: 5px;
+    margin-left: 5px;
+    grid-area: CoffeeCard-img;
+  }
+  
+  .CoffeeCard-tags-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    grid-area: CoffeeCard-tags-container;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: auto;
+  }
+  
+  .CoffeeCard-tags {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #c47f17;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    min-width: 10px;
+    height: 21px;
+    background: #f1e9c9;
+    border-radius: 100px;
+    border: none;
+    margin-top: 16px;
+    margin-inline: 2px;
+  }
+  
+  .CoffeeCard-name {
+    font-family: "Baloo 2", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 36.2px;
+    color: #403937;
+    margin-top: 42px;
+    margin-bottom: 0px;
+    grid-area: CoffeeCard-name;
+  }
+  
+  .CoffeeCard-description {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: start;
+    color: #8d8686;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 216px;
+    grid-area: CoffeeCard-description;
+  }
+  
+  .CoffeeCard-buy-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90px;
+    height: 180px;
+    grid-area: CoffeeCard-buy-container;
+  }
+  
+  .CoffeeCard-buy-price {
+    width: 67px;
+    height: 31px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: right;
+    color: #574f4d;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buy-price-span {
+    font-size: 31px;
+    font-family: "Baloo 2", sans-serif;
+    font-weight: 900;
+  }
+  
+  .CoffeeCard-buy-actions {
+    width: 118px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+  
+  .CoffeeCard-action-counter {
+    background-color: #e6e5e5;
+      width: 82px;
+      height: 45px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+  }
+  
+  .action-counter-btn {
+    background: none;
+    color: #8047f8;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    width: 43px;
+    height: 43px;
+    border-radius: 2px;
+    margin-inline: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .action-counter-btn:hover {
+    background-color: #a7a7a7;
+    cursor: pointer;
+  }
+  
+  .counter-btn-minus {
+    height: 15.9375px;
+    width: 15.9375px;
+  }
+  
+  .counter-btn-plus {
+    height: 15.9375px;
+    width: 15.9375px;
+  }
+  
+  .action-counter-input {
+    width: 20px;
+    height: 21px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-align: center;
+    color: #272221;
+    border: none;
+    background: none;
+    -ms-appearance: textfield;
+    -moz-appearance: textfield;
+  }
+  
+  .action-counter-input::-webkit-outer-spin-button,
+  .action-counter-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .action-counter-input:focus {
+    border: none;
+    outline: none;
+  }
+  
+  .CoffeeCard-action-Cart {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: #4b2995;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  .CoffeeCard-action-Cart:hover {
+    cursor: pointer;
+    background-color: #411d90;
+  }
+  
+  .CoffeeCard-buy-icon {
+    width: 28px;
+  }
+  
 }

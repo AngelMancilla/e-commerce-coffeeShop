@@ -7,3 +7,9 @@
   width: 500px;
   margin-top: 178px;
 }
+
+@media (max-width: 1080px) {
+  .cr-img {
+    display: none;
+  } 
+}
