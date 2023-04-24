@@ -19,7 +19,7 @@ export default function Title() {
             <li className="intro-lists-item">
               <button className="item-btn item-btn-cart">
                 <img
-                  src="../src/assets/intro-icons/cart-icon.svg"
+                  src="./intro-icons/cart-icon.svg"
                   alt="icon cart"
                   className="item-icon-cart"
                 />
@@ -29,7 +29,7 @@ export default function Title() {
             <li className="intro-lists-item">
               <button className="item-btn item-btn-timer">
                 <img
-                  src="../src/assets/intro-icons/timer-icon.svg"
+                  src="./intro-icons/timer-icon.svg"
                   alt="icon timer"
                   className="item-icon-timer"
                 />
@@ -39,7 +39,7 @@ export default function Title() {
             <li className="intro-lists-item">
               <button className="item-btn item-btn-package">
                 <img
-                  src="../src/assets/intro-icons/package-icon.svg"
+                  src="./intro-icons/package-icon.svg"
                   alt="icon package"
                   className="item-icon-package"
                 />
@@ -49,7 +49,7 @@ export default function Title() {
             <li className="intro-lists-item">
               <button className="item-btn item-btn-coffee">
                 <img
-                  src="../src/assets/intro-icons/coffee-icon.svg"
+                  src="./intro-icons/coffee-icon.svg"
                   alt="icon coffee"
                   className="item-icon-coffee"
                 />
@@ -61,7 +61,7 @@ export default function Title() {
       </div>
       <img
         className="intro-coffee-img"
-        src="../src/assets/coffee.png"
+        src="./coffee.png"
         alt="coffee icon"
       />
     </div>

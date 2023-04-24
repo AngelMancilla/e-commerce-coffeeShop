@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import "./CartForm.css";
 import CoffeeCart from "../Cart/CoffeeCart";
-import CoffeeList from "../Home/CoffeeList";
 import { CartContext } from "../../CartContext";
 import { CheckoutContext } from "../../CheckoutContext";
 import { useNavigate } from "react-router-dom";
 
-export default function CartForm({ onSubmit }) {
+export default function CartForm() {
   const { cart, setCart } = useContext(CartContext);
 
   const { isFormValid } = useContext(CheckoutContext);

@@ -51,7 +51,7 @@ export default function CoffeeCart(product) {
               >
                 <img
                   className="counter-btn-plus-minus"
-                  src="../src/assets/CoffeeCars-icons/minus-icon.svg"
+                  src="../public/CoffeeCars-icons/minus-icon.svg"
                   alt="minus-icon"
                 />
               </button>
@@ -66,7 +66,7 @@ export default function CoffeeCart(product) {
               <button className="action-counter-btn" onClick={handleAddClick}>
                 <img
                   className="counter-btn-plus-minus"
-                  src="../src/assets/CoffeeCars-icons/plus-icon.svg"
+                  src="../public/CoffeeCars-icons/plus-icon.svg"
                   alt="plus-icon"
                 />
               </button>

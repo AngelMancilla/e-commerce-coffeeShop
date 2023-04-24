@@ -18,7 +18,7 @@ const Header = () => {
       <button onClick={homeClick} className="header-logo-btn">
         <img
           className="header-logo-icon"
-          src="../src/assets/logo.svg"
+          src="./logo.svg"
           alt="Logo icon"
         />
       </button>
@@ -29,7 +29,7 @@ const Header = () => {
         >
           <img
             className="header-location-icon"
-            src="../src/assets/location-svgrepo-com.svg"
+            src="./location-svgrepo-com.svg"
             alt="vector icon"
           />
           <span>Tijuana, Mexico</span>
@@ -40,7 +40,7 @@ const Header = () => {
         >
           <img
             className="header-cart-icon"
-            src="../src/assets/cart-svgrepo-com.svg"
+            src="./cart-svgrepo-com.svg"
             alt="cart icon"
           />
         </button>

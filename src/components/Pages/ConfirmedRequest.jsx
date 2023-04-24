@@ -10,7 +10,7 @@ export default function ConfirmedRequest() {
     <Header />
     <div className='cr-container'>
       <Shipment/>
-      <img className='cr-img' src="..\src\assets\men.svg" alt="men icon" />
+      <img className='cr-img' src=".\men.svg" alt="men icon" />
     </div>
     </>
   )

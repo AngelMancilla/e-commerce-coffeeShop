@@ -17,7 +17,7 @@ export default function PaymentForm() {
       <div className="paymentform-frame-container">
         <img
           className="paymentform-frame-icon"
-          src="../src/assets/checkout-icons/dollar-icon.svg"
+          src="../public/checkout-icons/dollar-icon.svg"
           alt="dollart pin"
         />
         <div className="frame-text-container">
@@ -36,7 +36,7 @@ export default function PaymentForm() {
         >
           <img
             className="buttons-icons"
-            src="..\src\assets\checkout-icons\creditcard-icon.svg"
+            src="..\public\checkout-icons\creditcard-icon.svg"
             alt="credit card icon"
           />
           Credit card
@@ -49,7 +49,7 @@ export default function PaymentForm() {
         >
           <img
             className="buttons-icons"
-            src="..\src\assets\checkout-icons\bank.svg"
+            src="..\public\checkout-icons\bank.svg"
             alt="bank icon"
           />
           Debit card
@@ -62,7 +62,7 @@ export default function PaymentForm() {
         >
           <img
             className="buttons-icons"
-            src="..\src\assets\checkout-icons\money.svg"
+            src="..\public\checkout-icons\money.svg"
             alt="money icon"
           />
           Cash

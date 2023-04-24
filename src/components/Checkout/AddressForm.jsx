@@ -29,7 +29,7 @@ useEffect(() => {
   return (
     <div className='addressform-container'> 
       <div className='addressform-frame-container'>
-        <img className='addressform-frame-icon' src='../src/assets/checkout-icons/Pin-icon.svg' alt='Icon pin' />
+        <img className='addressform-frame-icon' src='../public/checkout-icons/Pin-icon.svg' alt='Icon pin' />
         <div className='frame-text-container'>
           <h4 className='frame-text-title'>Delivery address</h4>
           <p className='addressform-frame-text-subtitle'>Enter the address where you want to receive your order</p>

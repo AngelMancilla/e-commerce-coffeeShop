@@ -69,7 +69,7 @@ export default function CoffeeCard(product) {
               >
                 <img
                   className="counter-btn-minus"
-                  src="../src/assets/CoffeeCars-icons/minus-icon.svg"
+                  src="./CoffeeCars-icons/minus-icon.svg"
                   alt="minus-icon"
                 />
               </button>
@@ -84,7 +84,7 @@ export default function CoffeeCard(product) {
               <button className="action-counter-btn" onClick={handleAddToCart}>
                 <img
                   className="counter-btn-plus"
-                  src="../src/assets/CoffeeCars-icons/plus-icon.svg"
+                  src="./CoffeeCars-icons/plus-icon.svg"
                   alt="plus-icon"
                 />
               </button>
@@ -92,7 +92,7 @@ export default function CoffeeCard(product) {
             <button onClick={handleClick} className="CoffeeCard-action-Cart">
               <img
                 className="CoffeeCard-buy-icon"
-                src="../src/assets/intro-icons/cart-icon.svg"
+                src="./intro-icons/cart-icon.svg"
                 alt=""
               />
             </button>
